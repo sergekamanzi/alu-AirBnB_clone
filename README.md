@@ -1,4 +1,4 @@
-AirBnB clone - The console
+AirBnB clone The console
 
 
 The project's objective is to install a basic replica of the AirBnB website on a server. Only a portion of the features will be implemented in order to cover all of the essential ideas of the higher level programming course.
