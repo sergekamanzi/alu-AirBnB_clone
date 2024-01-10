@@ -17,7 +17,7 @@ The command interpreter is akin to the Shell but tailored for the specific needs
 
 How to Start
 
-1.git clone https://github.com/your-username/AirBnB-Clone.git
+1.git clone https://github.com/sergekamanzi/AirBnB-Clone.git
 2.cd AirBnB-Clone
 3./console.py
 
