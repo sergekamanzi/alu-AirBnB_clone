@@ -14,7 +14,7 @@ class BaseModel:
 
         # if keyword argument is provided initialize class with the specified
         # values
-        if kwargs != {}:
+        if kwargs:
             for key, val in kwargs.items():
                 if key == '__class__':
                     continue
@@ -28,7 +28,6 @@ class BaseModel:
             self.created_at = datetime.utcnow()
             self.updated_at = self.created_at
 
-            #
             models.storage.new(self)
 
     def __str__(self):
@@ -45,8 +44,9 @@ class BaseModel:
     def to_dict(self):
         """Returning a dictionary containing all keys/values of __dict__"""
 
-        formated_dict = self.__dict__.copy()
-        formated_dict['created_at'] = formated_dict['created_at'].isoformat()
-        formated_dict['updated_at'] = formated_dict['updated_at'].isoformat()
-        formated_dict['__class__'] = self.__class__.__name__
-        return formated_dict
+        formatted_dict = self.__dict__.copy()
+        formatted_dict['created_at'] = formatted_dict['created_at'].isoformat()
+        formatted_dict['updated_at'] = formatted_dict['updated_at'].isoformat()
+        formatted_dict['__class__'] = self.__class__.__name__
+        return formatted_dict
+
